@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1e2024;
+    overflow-x: hidden;
+}
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+    height: 50px;
+    padding:10px;  
+    z-index: 2;
+}
+.logo {
+    color: white;
+    margin:10px 0px 0px -30px;
+    float: left;
+    padding: 5px;
+    border:2px solid white;;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    z-index: 2;
+}
+
+.nav-links li {
+    list-style: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 20px 0px 50px;
+      z-index: 2;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #1e2024;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+            margin-bottom: 50px;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+  
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.title,.profile{
+    margin-top: 100px;
+}
+p{
+    color: white;
+}
+.modern{
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    padding-bottom: 50px;
+}
+.bttn{
+    border: none;
+    width: 110px;
+    height: 50px;
+    color:white;
+    background-color:  #1e2024;
+    font-family: 'Quicksand', sans-serif;
+    font-style: bold;
+    font-size: 15px;
+}
+.bttn:hover{
+    color:white;
+    background-color:  #1e2024;
+    border: 2px solid white;
+}
+.first{
+    display: flex;
+    margin-left: 13%;
+}
+.service{
+    flex-direction: column;
+    width: 43%;
+    font-family: 'Noto Sans SC', sans-serif;
+    margin-bottom: 30px;
+}
+.title{
+    display: flex;
+}
+.bio{
+    flex-direction: column;
+}
+.displaypic{
+    margin-left: -500px;
+    width:95vh;
+    height: 60vh;
+}
+.profile{
+    position: relative;
+    margin:-100px 150px 0px 50%;
+    z-index: 1;
+    float: right;
+    background-color: #1e2024;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+}
+.profile-name{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+.profilepic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.name{
+    font-family: 'Noto Sans SC', sans-serif;
+}
+.work{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+.designed{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    width: 10em;
+}
+/*Responsive*/
+@media(min-width:320px) and (max-width:549px ){
+    .modern{
+    font-size: 2em;
+    margin-bottom:  -30px;
+    }
+    .service{
+     font-size: 15px;
+    width: 75%;
+     margin-bottom:  -5px;
+    }
+    .title{
+       display: flex;
+       flex-direction:column; 
+    }
+    .displaypic{
+    width:43vh;
+    height: 25vh;
+    margin-left: 0px;
+    }
+    .profile{
+    position: relative;
+    margin:-50px 130px 0px 50%;
+    float: right;
+    width: 140px;
+    height: 100px;
+ 
+    }
+    .profilepic{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    }
+    .name{
+     font-size: 7px;
+    }
+    .work{
+    font-size: 5px;
+    }
+    .designed{
+    margin-top: -20px;
+    font-size: 10px;
+    width: 10em;
+    }
+}
+@media(min-width:985px)and (max-width: 1066px){
+    .displaypic{
+    width:80vh;
+    height: 60vh;
+    }
+    .profile{
+    margin:-50px 100px 0px 50%;
+    float: right;
+    width: 250px;
+    height: 100px;
+ 
+    }
+    .profilepic{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    }
+    .name{
+     font-size: 15px;
+    }
+    .work{
+    font-size: 10px;
+    }
+    .designed{
+    margin-top: -20px;
+    font-size: 18px;
+    width: 10em;
+    }
+}
+ @media (max-width: 375px){
+    .displaypic{
+        width:35vh;
+        height: 20vh;
+        }
+    .profile{
+         margin:-50px 80px 0px 0px;
+        }
+    }
+@media(min-width:550px)and (max-width: 984px){
+    .modern{
+    font-size: 2em;
+    margin-bottom:  -30px;
+    }
+    .service{
+     font-size: 15px;
+    width: 75%;
+    margin-bottom: 25px;
+    }
+    .title{
+       display: flex;
+       flex-direction:column; 
+    }
+    .bbtn{
+        margin-bottom:  20px;
+    }
+    .displaypic{
+    width:70vh;
+    height: 50vh;
+    margin-left: 0px;
+    }
+    .profile{
+    position: relative;
+    margin:-50px 290px 0px 50%;
+    float: right;
+   width: 250px;
+    height: 100px;
+ 
+    }
+    .profilepic{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    }
+    .name{
+     font-size: 15px;
+    }
+    .work{
+    font-size: 10px;
+    }
+    .designed{
+    margin-top: -20px;
+    font-size: 18px;
+    width: 10em;
+    }
+    @media (max-width: 768px){
+    .profile{
+         margin:-50px 150px 0px 0px;
+        }
+    .displaypic{
+        width:55vh;
+        height: 40vh;
+        }
+    }
+     @media (max-width: 764px){
+    .profile{
+        float:right ;  
+         margin:-50px 290px 0px 0px;
+        }
+    }
+     @media (max-width: 760px){
+    .profile{
+        float:right ;  
+         margin:-50px 290px 0px 0px;
+        }
+    }
+     @media (max-width: 708px){
+    .profile{
+         margin:-50px 250px 0px 0px;
+        }
+    }
+     @media (max-width: 678px){
+    .profile{
+         margin:-50px 200px 0px 0px;
+        }
+    }
+     @media (max-width: 625px){
+    .profile{
+         margin:-50px 180px 0px 0px;
+        }
+    }
+     @media (max-width: 573px){
+    .profile{
+         margin:-50px 100px 0px 0px;
+        }
+    }
+}
